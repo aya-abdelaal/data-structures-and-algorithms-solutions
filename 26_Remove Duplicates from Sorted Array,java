@@ -1,0 +1,22 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int pointer = 0;
+        int count = 0;
+
+        while(pointer < nums.length){
+            int temp = nums[pointer];
+
+            while( pointer < nums.length && temp == nums[pointer])
+                pointer++;
+            
+
+            nums[count] = temp;
+            count++;
+        }
+
+
+        return count;
+
+
+    }
+}
